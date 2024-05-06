@@ -1,0 +1,2 @@
+# cookiecutter
+python project scaffolding
