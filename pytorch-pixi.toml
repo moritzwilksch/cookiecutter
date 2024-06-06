@@ -1,0 +1,13 @@
+[project]
+name = "code"
+version = "0.1.0"
+description = "Add a short description here"
+channels = ["nvidia", "conda-forge", "pytorch"]
+platforms = ["linux-64"]
+
+[tasks]
+
+[dependencies]
+pytorch = { version = ">=2.3.0,<2.4", channel = "pytorch" }  # force channel
+pytorch-cuda = "12.1.*"
+ipykernel = ">=6.29.3,<6.30"
