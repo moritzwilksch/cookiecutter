@@ -30,5 +30,7 @@ lint.ignore = [
     "ANN",
     "D",
     "FA",
+    "ISC001",
+    "COM812",
 ]
 line-length = 99
