@@ -1,18 +1,28 @@
 repos:
   - repo: local
     hooks:
+      - id: setup env
+        name: setup env
+        entry: pixi install -e lint
+        language: system
+        always_run: true
+        require_serial: true
+        pass_filenames: false
       - id: ruff format
         name: ruff format
         entry: pixi run -e lint ruff format --force-exclude
         language: system
         types: [python]
+        require_serial: true
       - id: ruff lint
         name: ruff lint
         entry: pixi run -e lint ruff check --force-exclude --fix
         language: system
         types: [python]
+        require_serial: true
       - id: mypy
         name: mypy
         entry: pixi run -e lint mypy
         language: system
         types: [python]
+        require_serial: true
