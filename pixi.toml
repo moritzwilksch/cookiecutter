@@ -15,9 +15,12 @@ python = ">=3.12.3,<3.13"
 my_pkg = { path = ".", editable = true }
 
 [feature.lint.dependencies]
-ruff = "*"
-pre-commit = "*"
 mypy = "*"
+ruff = "*"
+taplo = "*"
+
+[feature.lint.tasks]
+lint = "ruff check --fix . && taplo format && mypy ."
 
 [feature.dev.dependencies]
 ipykernel = "*"
