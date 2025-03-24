@@ -26,7 +26,7 @@ lint = "ruff check --fix . && taplo format && mypy ."
 ipykernel = "*"
 
 [feature.build.dependencies]
-poetry-core = "*"
+hatchling = "*"
 
 [environments]
 default = ["lint", "dev", "build"]
