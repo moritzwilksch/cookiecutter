@@ -25,7 +25,10 @@ lint = "ruff check --fix . && taplo format && mypy ."
 [feature.dev.dependencies]
 ipykernel = "*"
 
+[feature.build.dependencies]
+poetry-core = "*"
+
 [environments]
-default = ["lint", "dev"]
+default = ["lint", "dev", "build"]
 dev = ["dev"]
 lint = ["lint"]
